@@ -6,10 +6,10 @@ class Publication
 private:
 protected:
 public:
-  Publication(string t, double p)
+  Publication()
   {
-    string title = t;
-    price double = p;
   };
+  string title;
+  double price;
 }
 #endif
