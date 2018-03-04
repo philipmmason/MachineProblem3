@@ -14,7 +14,7 @@ void Publication::Publication()
   price double;
 };
 
-voide Publication::readData()
+void Publication::readData()
 {
   cout << "Please enter the the title of the publication: " << endl;
   cin >> title >> endl;
