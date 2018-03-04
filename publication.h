@@ -1,7 +1,5 @@
-#include <iostream>
-#include "publication.h"
-
-using namespace std;
+#ifndef PUBLICATION_H
+#define PUBLICATION_H
 
 class Publication
 {
@@ -14,3 +12,4 @@ public:
     price double = p;
   };
 }
+#endif
