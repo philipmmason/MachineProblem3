@@ -12,4 +12,15 @@ public:
   string title;
   double price;
 }
+
+class Book : public Publication
+{
+  private:
+  protected:
+  public:
+    Book();
+    int pageCount;
+};
+
+
 #endif
