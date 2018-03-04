@@ -14,8 +14,14 @@ public:
   double price;
 }
 
+//Base class
+class Sales
+{
+  
+};
+
 //derived class for books publications.
-class Book : public Publication
+class Book : public Publication, public Sales
 {
   private:
   protected:
@@ -25,7 +31,7 @@ class Book : public Publication
 };
 
 //derived class for publications on cassettes.
-class Tape : public Publication
+class Tape : public Publication, public Sales
 {
   private:
   protected:
