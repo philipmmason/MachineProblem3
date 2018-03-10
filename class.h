@@ -1,44 +1,42 @@
 #ifndef CLASS_H
 #define CLASS_H
 
+#include <iostream>
+#include <string>
+
+using namespace std;
+
 //Base class
 class Publication
 {
 private:
 protected:
 public:
-  Publication()
-  {
-  };
-  string title;
-  double price;
-}
-
-//Base class
-class Sales
-{
-  
+	Publication()
+	{
+	}
+	string title;
+	double price;
 };
 
-//derived class for books publications.
-class Book : public Publication, public Sales
+class Book : public Publication
 {
-  private:
-  protected:
-  public:
-    Book();
-    int pageCount;
+private:
+protected:
+public:
+	int pageCount;
+	void readData();
+	void displayData();;
 };
 
-//derived class for publications on cassettes.
-class Tape : public Publication, public Sales
+class Tape : public Publication
 {
-  private:
-  protected:
-  public:   
-      Tape(double time)
-      {
-        int time = time;
-      };
- };
+private:
+protected:
+public:
+	double playingTime;
+	void readData();
+	void displayData();
+};
 #endif
+
