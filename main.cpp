@@ -13,8 +13,9 @@ int main()
   Tape Tape1;//Tape Object
   Tape *ptrTape;//Pointer of class Tape
   ptrTape = &Tape;//Give address of object Tape to Tape1 class pointer
-
-  cout << "Please enter the : " << ptrBox->Volume() << endl;
-
+  
+  ptrBook->readData();//using class pointer to access member function
+  ptrBook->diplayData();//using class pointer to access member finction
+ 
 
 }
