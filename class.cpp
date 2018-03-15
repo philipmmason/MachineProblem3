@@ -4,21 +4,30 @@
 
 using namespace std;
 
-
-void Book::readData(int *price, string *title)
+void Publication::readData(string *title, double *price)
 {
-	price = *price;
 	title = *title;
+	price = *price;
 	//cout << "Please enter the title of the book: "; getline(cin, title);
 }
 
-void Book::displayData()
+//Function to set the data members of a bookpubliction passing in pointers.
+void Book::readData(double *pgCnt)
 {
-	cout << "The title is " << title <<" and the price is $" << price << endl;
+	pageCount = *pgCnt;
+	//cout << "Please enter the title of the book: "; getline(cin, title);
 }
 
-void Tape::readData()
+//Function to display data member values.
+void Book::displayData()
 {
+	cout << "Title: " << title << endl; endl;
+	cout << "Price: $" << price << endl; endl;
+}
+
+void Tape::readData(int *time)
+{
+	time = *time;
 }
 
 void Tape::displayData()
