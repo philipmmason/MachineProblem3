@@ -5,14 +5,16 @@
 using namespace std;
 
 
-void Book::readData()
+void Book::readData(int *price, string *title)
 {
-	cout << "Please enter the title of the book: "; getline(cin, title);
+	price = *price;
+	title = *title;
+	//cout << "Please enter the title of the book: "; getline(cin, title);
 }
 
 void Book::displayData()
 {
-	cout << title;
+	cout << "The title is " << title <<" and the price is $" << price << endl;
 }
 
 void Tape::readData()
