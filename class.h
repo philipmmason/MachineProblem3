@@ -38,5 +38,13 @@ public:
 	void readData();
 	void displayData();
 };
+
+class Sales
+{
+private:
+protected:
+public:
+	
+}
 #endif
 
