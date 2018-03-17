@@ -1,6 +1,5 @@
 #ifndef CLASS_H
 #define CLASS_H
-
 #include <iostream>
 #include <string>
 
@@ -16,7 +15,10 @@ public:
 	{
 	}
 	string title;
+	string *ptrTitle;
 	double price;
+	void readData();
+	void displayData();
 };
 
 class Book : public Publication
@@ -26,7 +28,7 @@ protected:
 public:
 	int pageCount;
 	void readData();
-	void displayData();;
+	void displayData();
 };
 
 class Tape : public Publication
@@ -34,7 +36,7 @@ class Tape : public Publication
 private:
 protected:
 public:
-	double playingTime;
+	double playTime;
 	void readData();
 	void displayData();
 };
@@ -44,7 +46,7 @@ class Sales
 private:
 protected:
 public:
-	
+
 }
 #endif
 
