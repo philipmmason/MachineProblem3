@@ -2,34 +2,45 @@
 #include <string>
 #include "Class.h"
 
-using namespace std;
+; using namespace std;
 
-void Publication::readData(string *title, double *price)
+void Publication::readData()
 {
-	title = *title;
-	price = *price;
-	//cout << "Please enter the title of the book: "; getline(cin, title);
+	cout << "Please enter the title of the book." << endl; getline(cin,title);
+	cout << "Please enter the price of the book." << endl; cin >> price;
 }
 
-//Function to set the data members of a bookpubliction passing in pointers.
-void Book::readData(double *pgCnt)
+void Publication::displayData()
 {
-	pageCount = *pgCnt;
-	//cout << "Please enter the title of the book: "; getline(cin, title);
+	cout << title << ".\n";
+	cout << price << ".\n";
+}
+
+void Book::readData()
+{
+	cout << "Please enter the title of the book." << endl; getline(cin, title);
+	cout << "Please enter the price of the book." << endl; cin >> price;
+	cout << "Please enter the page count of the book."; cin >> pageCount;
 }
 
 //Function to display data member values.
 void Book::displayData()
 {
-	cout << "Title: " << title << endl; endl;
-	cout << "Price: $" << price << endl; endl;
+	cout << "Title: " << title << endl << endl;
+	cout << "Price: $" << price << endl << endl;
+	cout << "Page count: " << pageCount << endl << endl;
 }
 
-void Tape::readData(int *time)
+void Tape::readData()
 {
-	time = *time;
+	cout << "Please enter the title of the tape." << endl; getline(cin, title);
+	cout << "Please enter the price of the tape." << endl; cin >> price;
+	cout << "Please enter the page count of the a."; cin >> playTime;
 }
 
 void Tape::displayData()
 {
+	cout << "Title: " << title << endl << endl;
+	cout << "Price: $" << price << endl << endl;
+	cout << "Play time: " << playTime << endl << endl;
 }
