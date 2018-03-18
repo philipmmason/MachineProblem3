@@ -21,26 +21,6 @@ public:
 	void displayData();
 };
 
-class Book : public Publication : public Sales
-{
-private:
-protected:
-public:
-	int pageCount;
-	void readData();
-	void displayData();
-};
-
-class Tape : public Publication : public Sales
-{
-private:
-protected:
-public:
-	double playTime;
-	void readData();
-	void displayData();
-};
-
 class Sales
 {
 private:
@@ -51,4 +31,26 @@ public:
 	void displayData();
 	
 }
+
+class Book : public Publication, public Sales
+{
+private:
+protected:
+public:
+	int pageCount;
+	void readData();
+	void displayData();
+};
+
+class Tape : public Publication, public Sales
+{
+private:
+protected:
+public:
+	double playTime;
+	void readData();
+	void displayData();
+};
+
+
 #endif
