@@ -44,3 +44,17 @@ void Tape::displayData()
 	cout << "Price: $" << price << endl << endl;
 	cout << "Play time: " << playTime << endl << endl;
 }
+
+
+void Sales::readData()
+{
+	cout << "Please enter the sales over the last three months of this publication." << endl;
+	cout << "First Month: "; cin >> sales[0]; 
+	cout << "\nSecond Month: "; cin >> sales[1]; 
+	cout << "\nThird Month: "; cin >> sales[2]; 
+}
+	
+void Sales::displayData()
+{
+	cout << "The last three months sales for this publication are " << sales[0], sales[1], sles[2] << "." << endl;
+}
