@@ -46,8 +46,8 @@ class Sales
 private:
 protected:
 public:
-	double sales[3] {};
-	void readData()	
+	double sales[3];
+	void readData();
 	void displayData();
 	
 }
