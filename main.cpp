@@ -7,13 +7,16 @@
 int main()
 {
 	//MyClass * p1 = new MyClass;
+	
 	//Book Book1;//Book object
-	Book * Book1 = new Book;//pointer of class Book
 	//ptrBook1 = &Book1;//Give address of object Book1 to Book class pointer
+	
+	Book * Book1 = new Book;//pointer of class Book
 
 	//Tape Tape1;//Tape Object
-	Tape * Tape1 = new Tape;//Pointer of class Tape
 	//ptrTape1 = &Tape1;//Give address of object Tape to Tape1 class pointer
+	
+	Tape * Tape1 = new Tape;//Pointer of class Tape
 
 
 	Book1->readData();//user data for book
