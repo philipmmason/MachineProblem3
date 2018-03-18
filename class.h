@@ -26,6 +26,7 @@ class Sales
 private:
 protected:
 public:
+	Sales()
 	double sales[3];
 	void readData();
 	void displayData();
@@ -37,6 +38,7 @@ class Book : public Publication, public Sales
 private:
 protected:
 public:
+	Book()
 	int pageCount;
 	void readData();
 	void displayData();
@@ -47,6 +49,7 @@ class Tape : public Publication, public Sales
 private:
 protected:
 public:
+	Tape()
 	double playTime;
 	void readData();
 	void displayData();
