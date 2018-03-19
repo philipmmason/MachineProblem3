@@ -8,15 +8,15 @@ int main()
 {
 	//MyClass * p1 = new MyClass;
 	
-	//Book Book1;//Book object
-	//ptrBook1 = &Book1;//Give address of object Book1 to Book class pointer
+	Book Book1;//Book object
+	Book *ptrBook1 = &Book1;//Give address of object Book1 to Book class pointer
 	
-	Book * Book1 = new Book;//pointer of class Book
+	//Book *Book1 = new Book;//pointer of class Book
 
 	//Tape Tape1;//Tape Object
 	//ptrTape1 = &Tape1;//Give address of object Tape to Tape1 class pointer
 	
-	Tape * Tape1 = new Tape;//Pointer of class Tape
+	Tape *Tape1 = new Tape;//Pointer of class Tape
 
 
 	Book1->readData(Book1.&title,Book1.&price,Book1.&pageCount);//user data for book
