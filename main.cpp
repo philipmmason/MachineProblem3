@@ -19,7 +19,7 @@ int main()
 	Tape * Tape1 = new Tape;//Pointer of class Tape
 
 
-	Book1->readData();//user data for book
+	Book1->readData(Book1.&title,Book1.&price,Book1.&pageCount);//user data for book
 	cin.ignore();
 	Tape1->readData();//user data for tape
 
