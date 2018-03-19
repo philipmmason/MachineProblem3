@@ -4,10 +4,10 @@
 
 ; using namespace std;
 
-void Publication::readData()
+void Publication::readData(string * title, double * price)
 {
-	cout << "Please enter the title of the book." << endl; getline(cin,title);
-	cout << "Please enter the price of the book." << endl; cin >> price;
+	cout << "Please enter the title of the book." << endl; getline(cin,*title);
+	cout << "Please enter the price of the book." << endl; cin >> *price;
 }
 
 void Publication::displayData()
@@ -16,11 +16,11 @@ void Publication::displayData()
 	cout << price << ".\n";
 }
 
-void Book::readData()
+void Book::readData(string * getline, double * price, double * pgct)
 {
-	cout << "Please enter the title of the book." << endl; getline(cin, title);
-	cout << "Please enter the price of the book." << endl; cin >> price;
-	cout << "Please enter the page count of the book."; cin >> pageCount;
+	cout << "Please enter the title of the book." << endl; getline(cin, *title);
+	cout << "Please enter the price of the book." << endl; cin >> *price;
+	cout << "Please enter the page count of the book."; cin >> *pgct;
 }
 
 //Function to display data member values.
@@ -31,11 +31,11 @@ void Book::displayData()
 	cout << "Page count: " << pageCount << endl << endl;
 }
 
-void Tape::readData()
+void Tape::readData(string * getline, double * price, double * playtime)
 {
-	cout << "Please enter the title of the tape." << endl; getline(cin, title);
-	cout << "Please enter the price of the tape." << endl; cin >> price;
-	cout << "Please enter the page count of the a."; cin >> playTime;
+	cout << "Please enter the title of the tape." << endl; getline(cin, *title);
+	cout << "Please enter the price of the tape." << endl; cin >> *price;
+	cout << "Please enter the page count of the a."; cin >> *playTime;
 }
 
 void Tape::displayData()
