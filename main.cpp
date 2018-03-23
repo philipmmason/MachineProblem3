@@ -1,32 +1,90 @@
+//include headerfiles
+#include "publication.h"
+#include "sales.h"
+#include "book.h"
+#include "tape.h"
+//include some needed libraries
 #include <iostream>
+#include <stdio.h>
 #include <string>
-#include "Class.h"
+#include <stdlib.h>
 
-; using namespace std;
+using namespace std;
+
+//prototype for main
+int PublicationType()
+{
+	int type;
+	string bookOrTape;
+	cout << "What type of publiction will you be storing? book or type:" << endl;
+	cin >> bookOrTape;
+	if (bookOrTape == "book" || "Book")
+	{
+		type = 1;
+		return type;
+	}else if (bookOrTape == "tape" || "Tape")
+		{
+			type = 2;
+			return type;
+	}
+}
+
 
 int main()
 {
-	//MyClass * p1 = new MyClass;
+
+	Book * bookArray[3];
+	Tape * tapeArray[2];
+
+	int bookCount = 0;
+	int tapeCount = 0;
 	
-	Book Book1;//Book object
-	Book *ptrBook1 = &Book1;//Give address of object Book1 to Book class pointer
+	if (PublicationType() == 1)
+		{
+			for (int i = 0; i < 3; ++i)
+			{
+				bookArray[i] = new Book(); //read book data
+				((Book*)bookArray[i])->readData();
+				bookCount++;
+			}
+
+		}
+		else if (PublicationType() == 2)
+		{
+			for (int i = 0; i < 2; ++i)
+			{
+				tapeArray[i] = new Tape();//tape data
+				((Tape*)tapeArray[i])->readData();
+				tapeCount++;
+			}
+
+		}
+		else if (PublicationType() != 1 || 2)
+		{
+			cout << "You must enter book or tape to specify the type of publication." << endl;
+		}
 	
-	//Book *Book1 = new Book;//pointer of class Book
+		
 
-	//Tape Tape1;//Tape Object
-	//ptrTape1 = &Tape1;//Give address of object Tape to Tape1 class pointer
+		if (bookCount > 0) 
+		{
+			cout << endl << "List of books and their details" << endl;
+			for (int i = 0; i < 3; ++i)
+			{
+				((Book*)bookArray[i])->displayData(); cout << endl;
+			} 
+
+		}
+		else cout << "There are no recorded books." << endl;
 	
-	Tape *Tape1 = new Tape;//Pointer of class Tape
-
-
-	Book1->readData(Book1.&title,Book1.&price,Book1.&pageCount);//user data for book
-	cin.ignore();
-	Tape1->readData();//user data for tape
-
-	system("CLS");//clear screen
-
-	Book1->displayData();//using class pointer to access member finction
-	Tape1->displayData();//using class pointer to access member finction
-
+		if (tapeCount > 0)
+		{
+			cout << endl << "List of Cassette tapes and their details." << endl;
+			for (int i = 0; i < 2; ++i)
+			{
+				((Tape*)tapeArray[i])->displayData(); cout << endl;
+			}
+		}
+	
 	return 0;
 }
