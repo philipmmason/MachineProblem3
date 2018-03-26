@@ -7,6 +7,7 @@
 
 using namespace std;
 
+//function in base class to store publication information that is needed for all types of publications.
 void Publication::readData()
 {
 	cout << "Please enter the title of the publication: " << endl;
@@ -17,6 +18,7 @@ void Publication::readData()
 	cin >> price;cout << endl;	
 }
 
+//function to display publications data of title and price
 void Publication::displayData()
 {
 	cout << "The title of the publication is: " << title << endl;
