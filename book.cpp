@@ -6,6 +6,7 @@
 
 using namespace std;
 
+//function to store book data in array
 void Book::readData()
 {
 	Publication::readData();
@@ -15,6 +16,7 @@ void Book::readData()
 	Sales::readData();
 }
 
+//function to display book data.
 void Book::displayData()
 {
 	Publication::displayData();
